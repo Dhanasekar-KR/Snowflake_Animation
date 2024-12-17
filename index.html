@@ -1,83 +1,23 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snowflake Animation</title>
-    <style>
-        html, body {
-            padding: 0;
-            margin: 0;
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-            background: linear-gradient(#ffffff, #7d57a3);
-        }
-
-        .snowflake {
-            color: #fff;
-            font-size: 2em;
-            font-family: Arial, sans-serif;
-            text-shadow: 0 0 4px #00BFFF;
-            position: fixed;
-            top: -10%;
-            z-index: 9999;
-            user-select: none;
-            animation-name: snowflakes-shake;
-            animation-duration: 3s;
-            animation-timing-function: ease-in-out;
-        }
-
-        .snowflake .inner {
-            animation-duration: 10s;
-            animation-name: snowflakes-fall;
-            animation-timing-function: linear;
-        }
-
-        @keyframes snowflakes-fall {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(110vh); }
-        }
-
-        @keyframes snowflakes-shake {
-            0%, 100% { transform: translateX(0); }
-            50% { transform: translateX(40px); }
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-
-<script>
-    // Snowflake Generator
-    function createSnowflakes() {
-        const snowflakeCount = 50; // Number of snowflakes to generate
-        const body = document.body;
-
-        for (let i = 0; i < snowflakeCount; i++) {
-            const snowflake = document.createElement('div');
-            snowflake.classList.add('snowflake');
-            const inner = document.createElement('div');
-            inner.classList.add('inner');
-            inner.textContent = '❄';
-
-            // Randomize starting position
-            const leftPosition = Math.random() * 100; // Percentage of screen width
-            const animationDelay = Math.random() * 10; // Random delay for animation
-            const fontSize = Math.random() * 1.5 + 1; // Random font size (1em to 2.5em)
-
-            snowflake.style.left = `${leftPosition}vw`;
-            snowflake.style.animationDelay = `${animationDelay}s`;
-            snowflake.style.fontSize = `${fontSize}em`;
-
-            // Append to body
-            snowflake.appendChild(inner);
-            body.appendChild(snowflake);
-        }
-    }
-
-    // Run the snowflake generator
-    createSnowflakes();
-</script>
-
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake"><div class="inner">❅</div></div>
+        <div class="snowflake"><div class="inner">❅</div></div>
+        <div class="snowflake"><div class="inner">❅</div></div>
+        <div class="snowflake"><div class="inner">❅</div></div>
+        <div class="snowflake"><div class="inner">❅</div></div>
+        <div class="snowflake"><div class="inner">❅</div></div>
+        <div class="snowflake"><div class="inner">❅</div></div>
+        <div class="snowflake"><div class="inner">❅</div></div>
+        <div class="snowflake"><div class="inner">❅</div></div>
+        <div class="snowflake"><div class="inner">❅</div></div>
+        <div class="snowflake"><div class="inner">❅</div></div>
+        <div class="snowflake"><div class="inner">❅</div></div>
+    </div>
 </body>
 </html>
