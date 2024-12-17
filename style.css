@@ -11,15 +11,15 @@ html, body {
   height: 100vh;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(#eeeeee, #bd8df1);
+  background: linear-gradient(#eeeeee, #bd8df133);
 }
 
 /* Customizable snowflake styling */
 .snowflake {
-    color: #fff;
+    color: #7f4cff;
     font-size: 2em;
     font-family: Arial, sans-serif;
-    text-shadow: 0 0 4px #00BFFF;
+    text-shadow: 0 0 4px #fff;
 }
 
 .snowflake, .snowflake .inner {
