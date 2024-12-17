@@ -11,7 +11,7 @@ html, body {
   height: 100vh;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(#123, #111);
+  background: linear-gradient(#d0b6ff, #7e17ee);
 }
 
 /* Customizable snowflake styling */
