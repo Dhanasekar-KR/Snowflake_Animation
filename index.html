@@ -46,16 +46,38 @@
     </style>
 </head>
 <body>
-    <!-- Snowflake Elements -->
-    <div class="snowflake"><div class="inner">❄</div></div>
-    <div class="snowflake"><div class="inner">❄</div></div>
-    <div class="snowflake"><div class="inner">❄</div></div>
-    <div class="snowflake"><div class="inner">❄</div></div>
-    <div class="snowflake"><div class="inner">❄</div></div>
-    <div class="snowflake"><div class="inner">❄</div></div>
-    <div class="snowflake"><div class="inner">❄</div></div>
-    <div class="snowflake"><div class="inner">❄</div></div>
-    <div class="snowflake"><div class="inner">❄</div></div>
-    <div class="snowflake"><div class="inner">❄</div></div>
+
+<script>
+    // Snowflake Generator
+    function createSnowflakes() {
+        const snowflakeCount = 50; // Number of snowflakes to generate
+        const body = document.body;
+
+        for (let i = 0; i < snowflakeCount; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            const inner = document.createElement('div');
+            inner.classList.add('inner');
+            inner.textContent = '❄';
+
+            // Randomize starting position
+            const leftPosition = Math.random() * 100; // Percentage of screen width
+            const animationDelay = Math.random() * 10; // Random delay for animation
+            const fontSize = Math.random() * 1.5 + 1; // Random font size (1em to 2.5em)
+
+            snowflake.style.left = `${leftPosition}vw`;
+            snowflake.style.animationDelay = `${animationDelay}s`;
+            snowflake.style.fontSize = `${fontSize}em`;
+
+            // Append to body
+            snowflake.appendChild(inner);
+            body.appendChild(snowflake);
+        }
+    }
+
+    // Run the snowflake generator
+    createSnowflakes();
+</script>
+
 </body>
 </html>
